@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multifi</title>
+    <title>INSPINIA | Responsive admin theme</title>
 
     <!-- Include style per-controller - vendor plugins -->
     <%= stylesheet_link_tag params[:controller] if ::Rails.application.assets.find_asset("#{params[:controller]}.css") %>
@@ -18,9 +18,7 @@
 
 
 </head>
-<body>
-
-<!-- Skin configuration box -->
+<body class="fixed-sidebar no-skin-config full-height-layout">
 
     <!-- Wrapper-->
     <div id="wrapper" class="<%= params[:controller] %>.<%= params[:action] %>">
@@ -38,7 +36,7 @@
             <%= yield %>
 
             <!-- Footer -->
-            <%# render 'layouts/footer' %>
+            <%= render 'layouts/footer' %>
 
         </div>
         <!-- End page wrapper-->
