@@ -36,9 +36,7 @@
                 <a href="<%= url_for :controller => 'dashboard', :action => 'redeem' %>"><i class="fa fa-ticket"></i> <span class="nav-label">Redeem</span><span class="fa arrow"></span></a>
             </li>
             <li class="<%= is_active_controller('mailbox') %>">
-                <a href="mailbox.html"><i class="fa fa-flash"></i> <span class="nav-label">Offers </span></a>
-                <ul class="nav nav-second-level collapse <%= is_active_controller('mailbox') %>">
-                </ul>
+                <a href="<%= url_for :controller => 'dashboard', :action => 'offers' %>"><i class="fa fa-flash"></i> <span class="nav-label">Offers </span></a>
             <li class="<%= is_active_controller('forms') %>">
                 <a href="#"><i class="fa fa-user"></i> <span class="nav-label">Customers</span><span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level collapse <%= is_active_controller('forms') %>">
