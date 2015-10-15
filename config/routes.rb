@@ -1,11 +1,29 @@
 Rails.application.routes.draw do
+  get 'dashboard/index'
+
+  get 'dashboard/redeem'
+
+  get 'dashboard/offers'
+
+  get 'dashboard/customers'
+
+  get 'dashboard/groups'
+
+  get 'dashboard/sources'
+
+  get 'dashboard/lists'
+
+  get 'dashboard/insights'
+
+  get 'dashboard/reports'
+
   get 'login/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+   root 'login#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
