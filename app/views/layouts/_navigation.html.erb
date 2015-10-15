@@ -21,7 +21,7 @@
                         <li><a href="">Mailbox</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="">Logout</a>
+                        <li><a href="<%= url_for :controller => 'login', :action => 'index' %>">Logout</a>
                         </li>
                     </ul>
                 </div>
@@ -50,10 +50,7 @@
                 <a href="<%= url_for :controller => 'dashboard', :action => 'lists' %>"><i class="fa fa-list"></i> <span class="nav-label">Expand Lists</span></a>
             </li>
             <li class="<%= is_active_controller('uielements') %>">
-                <a href="#"><i class="fa fa-line-chart"></i> <span class="nav-label">Insights</span><span class="fa arrow"></span></a>
-                <ul class="nav nav-second-level collapse <%= is_active_controller('uielements') %>">
-
-                </ul>
+                <a href="<%= url_for :controller => 'dashboard', :action => 'insights' %>"><i class="fa fa-line-chart"></i> <span class="nav-label">Insights</span><span class="fa arrow"></span></a>
             </li>
             <li class="<%= is_active_controller('gridoptions') %>">
             </li>
