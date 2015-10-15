@@ -41,9 +41,7 @@
                 <a href="<%= url_for :controller => 'dashboard', :action => 'customers' %>"><i class="fa fa-user"></i> <span class="nav-label">Customers</span><span class="fa arrow"></span></a>
             </li>
             <li class="<%= is_active_controller('appviews') %>">
-                <a href="#"><i class="fa fa-users"></i> <span class="nav-label">Groups</span></a>
-                <ul class="nav nav-second-level collapse <%= is_active_controller('appviews') %>">
-                </ul>
+                <a href="<%= url_for :controller => 'dashboard', :action => 'groups' %>"><i class="fa fa-users"></i> <span class="nav-label">Groups</span></a>
             </li>
             <li class="<%= is_active_controller('pages') %>">
                 <a href="#"><i class="fa fa-plus"></i> <span class="nav-label">Sources</span><span class="fa arrow"></span></a>
