@@ -44,9 +44,7 @@
                 <a href="<%= url_for :controller => 'dashboard', :action => 'groups' %>"><i class="fa fa-users"></i> <span class="nav-label">Groups</span></a>
             </li>
             <li class="<%= is_active_controller('pages') %>">
-                <a href="#"><i class="fa fa-plus"></i> <span class="nav-label">Sources</span><span class="fa arrow"></span></a>
-                <ul class="nav nav-second-level collapse <%= is_active_controller('pages') %>">
-                </ul>
+                <a href="<%= url_for :controller => 'dashboard', :action => 'sources' %>"><i class="fa fa-plus"></i> <span class="nav-label">Sources</span><span class="fa arrow"></span></a>
             </li>
             <li class="<%= is_active_controller('miscellaneous') %>">
                 <a href="#"><i class="fa fa-list"></i> <span class="nav-label">Expand Lists</span></a>
