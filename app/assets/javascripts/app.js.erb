@@ -4,20 +4,52 @@ angular.module('flapperNews', ['ui.router', 'templates', 'Devise'])
   '$urlRouterProvider',
   function($stateProvider, $urlRouterProvider){
     $stateProvider
-    .state('home', {
+    .state('index', {
+      abstract: true,
+      url: "/index",
+      templateUrl: '<%= asset_path("_content.html") %>',
+    })
+    .state('index.home', {
       url: '/home',
       templateUrl: '<%= asset_path("_home.html") %>',
       controller: 'MainCtrl'
     })
+    .state('index.redeem', {
+      url: '/redeem',
+      templateUrl: '<%= asset_path("_redeem.html") %>'
+    })
+    .state('index.offers',{
+      url: '/offers',
+      templateUrl: '<%= asset_path("_offers.html") %>'
+    })
+    .state('index.customers', {
+      url: '/customers',
+      templateUrl: '<%= asset_path("_customers.html") %>'
+    })
+    .state('index.groups', {
+      url: '/groups',
+      templateUrl: '<%= asset_path("_groups.html") %>'
+    })
+    .state('index.sources', {
+      url: '/sources',
+      templateUrl: '<%= asset_path("_sources.html") %>'
+    })
+    .state('index.lists', {
+      url: '/lists',
+      templateUrl: '<%= asset_path("_lists.html") %>'
+    })
+    .state('index.insights', {
+      url: '/insights',
+      templateUrl: '<%= asset_path("_insights.html") %>'
+    })
+    .state('index.reports', {
+      url: '/reports',
+      templateUrl: '<%= asset_path("_reports.html") %>'
+    })
     .state('login', {
       url: '/login',
       templateUrl: '<%= asset_path("_login.html") %>',
-      controller: 'AuthCtrl',
-      onEnter: ['$state', 'Auth', function($state, Auth) {
-        Auth.currentUser().then(function (){
-          $state.go('home');
-        })
-      }]
+      controller: 'AuthCtrl'
     });
 
     $urlRouterProvider.otherwise('login');

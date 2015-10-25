@@ -7,9 +7,10 @@
   <!-- Page title set in pageTitle directive -->
   <title page-title></title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"></link>
   <%= csrf_meta_tags %>
 </head>
-<body ng-app="flapperNews" ng-controller="MainCtrl" landing-scrollspy id="page-top">
+<body ng-app="flapperNews" ng-controller="MainCtrl">
 
   <div ui-view></div>
   <%= javascript_include_tag 'application' %>
