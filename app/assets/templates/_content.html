@@ -1,0 +1,103 @@
+<!-- Wrapper-->
+<div id="wrapper">
+
+    <!-- Navigation -->
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul side-navigation class="nav metismenu" id="side-menu">
+                <li class="nav-header">
+
+                    <div class="dropdown profile-element" dropdown>
+                        <a class="dropdown-toggle" dropdown-toggle href>
+                                <span class="clear">
+                                    <span class="block m-t-xs">
+                                        <strong class="font-bold">aliirz</strong>
+                                 </span>
+                                    <!-- <span class="text-muted text-xs block">Example menu<b class="caret"></b></span> -->
+                                </span>
+                        </a>
+                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                            <li><a href="/login">Logout</a></li>
+                        </ul>
+                    </div>
+                    <div class="logo-element">
+                        M
+                    </div>
+
+                </li>
+
+                <li ui-sref-active="active">
+                    <a ui-sref="index.home"><i class="fa fa-dashboard"></i> <span class="nav-label">Dashboard</span> </a>
+                </li>
+                <li ui-sref-active="active">
+                    <a ui-sref="index.redeem"><i class="fa fa-ticket"></i> <span class="nav-label">Redeem</span></a>
+                </li>
+                <li ui-sref-active="active">
+                    <a ui-sref="index.offers"><i class="fa fa-flash"></i> <span class="nav-label">Offers</span></a>
+                </li>
+                <li ui-sref-active="active">
+                    <a ui-sref="index.customers"><i class="fa fa-user"></i> <span class="nav-label">Customers</span></a>
+                </li>
+                <li ui-sref-active="active">
+                    <a ui-sref="index.sources"><i class="fa fa-plus"></i> <span class="nav-label">Sources</span></a>
+                </li>
+                <li ui-sref-active="active">
+                    <a ui-sref="index.lists"><i class="fa fa-list"></i> <span class="nav-label">Expand Lists</span></a>
+                </li>
+                <li ui-sref-active="active">
+                    <a ui-sref="index.insights"><i class="fa fa-line-chart"></i> <span class="nav-label">Insights</span></a>
+                </li>
+                <li ui-sref-active="active">
+                    <a ui-sref="index.reports"><i class="fa fa-pie-chart"></i> <span class="nav-label">Reports</span></a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <!-- Page wraper -->
+    <!-- ng-class with current state name give you the ability to extended customization your view -->
+    <div id="page-wrapper" class="gray-bg {{$state.current.name}}">
+
+        <!-- Page wrapper -->
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
+                    <span minimaliza-sidebar></span>
+                    <form role="search" class="navbar-form-custom" method="post" action="">
+                        <div class="form-group">
+                            <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
+                        </div>
+                    </form>
+                </div>
+                <ul class="nav navbar-top-links navbar-right">
+                    <li>
+                        <a href="#login">
+                            <i class="fa fa-sign-out"></i> Log out
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+
+        <!-- Main view  -->
+        <div ui-view></div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="pull-right">
+                10GB of <strong>250GB</strong> Free.
+            </div>
+            <div>
+                <strong>Copyright</strong> Example Company &copy; 2014-2015
+            </div>
+        </div>
+
+
+    </div>
+    <!-- End page wrapper-->
+
+</div>
+<!-- End wrapper-->
