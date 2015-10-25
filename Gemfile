@@ -1,13 +1,30 @@
+# app version 0.0.2
+
+
 source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 
+
+gem 'mongoid', '~> 5.0.0'
+gem 'bson_ext'
+
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'font-awesome-rails', '4.3.0.0'
 
 gem 'novus-nvd3-rails'
+
+gem 'responders', '~> 2.0'
+
+gem 'angular-rails-templates'
+
+
+gem 'devise', '~> 3.4.0'
+
+
+gem 'angular_rails_csrf'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
