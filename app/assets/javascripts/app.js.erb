@@ -50,6 +50,11 @@ angular.module('flapperNews', ['ui.router', 'templates', 'Devise'])
       url: '/login',
       templateUrl: '<%= asset_path("_login.html") %>',
       controller: 'AuthCtrl'
+    })
+    .state('register', {
+      url: '/register',
+      templateUrl: '<%= asset_path("_register.html") %>',
+      controller: 'AuthCtrl'
     });
 
     $urlRouterProvider.otherwise('login');
