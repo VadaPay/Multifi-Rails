@@ -1,4 +1,4 @@
-angular.module('flapperNews')
+angular.module('multifiApp')
 .factory('posts', [
   '$http',
   function($http){

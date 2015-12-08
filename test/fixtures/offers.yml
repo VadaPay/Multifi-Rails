@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  details: MyString
+  picture: MyString
+  expiry: 2015-11-27 20:32:40
+  termsconditions: MyString
+  theme: MyString
+  redemptionmethod: MyString
+  url: MyString
+  companyname: MyString
+  logo: MyString
+  address1: MyString
+  address2: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  country: MyString
+  phone: MyString
+  website: MyString
+
+two:
+  title: MyString
+  details: MyString
+  picture: MyString
+  expiry: 2015-11-27 20:32:40
+  termsconditions: MyString
+  theme: MyString
+  redemptionmethod: MyString
+  url: MyString
+  companyname: MyString
+  logo: MyString
+  address1: MyString
+  address2: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  country: MyString
+  phone: MyString
+  website: MyString

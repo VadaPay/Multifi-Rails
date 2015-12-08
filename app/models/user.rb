@@ -16,7 +16,7 @@ class User
 
   ## Rememberable
   field :remember_created_at, type: Time
-  field :company, type: String
+  # field :company, type: String
 
   ## Trackable
   field :sign_in_count,      type: Integer, default: 0
@@ -24,6 +24,8 @@ class User
   field :last_sign_in_at,    type: Time
   field :current_sign_in_ip, type: String
   field :last_sign_in_ip,    type: String
+
+  has_many :offers
 
   ## Confirmable
   # field :confirmation_token,   type: String
