@@ -10,13 +10,24 @@
 
 <script type="text/ng-template" id="myModalContent.html">
         <div class="modal-header">
-            <h3 class="modal-title">Im a modal!</h3>
+            <h3 class="modal-title">Choose a template</h3>
         </div>
         <div class="modal-body">
-            <p>One fine Body!</p>
+          <div class="row">
+            <div class="col-md-9">
+              <h1>My template goes here</h1>
+            </div>
+            <div class="col-md-3">
+              <ul class="list-group">
+                <li class="list-group-item">Minimal</li>
+                <li class="list-group-item">Flat</li>
+                <li class="list-group-item">Material</li>
+              </ul>
+            </div>
+          </div>
         </div>
         <div class="modal-footer">
-            <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
-            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+            <button class="btn btn-warning pull-left" type="button" ng-click="ok()">Cancel</button>
+            <button class="btn btn-success btn-lg pull-right" type="button" ng-click="cancel()">Use Template</button>
         </div>
 </script>
