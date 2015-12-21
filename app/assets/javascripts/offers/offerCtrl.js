@@ -10,7 +10,7 @@ angular.module('multifiApp')
       var modalInstance = $uibModal.open({
         animation: true,
         size: 'lg',
-        templateUrl: 'myModalContent.html',
+        templateUrl: 'CreateOfferModal.html',
         controller: 'newOfferModalCtrl',
       });
     };

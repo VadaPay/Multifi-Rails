@@ -5,4 +5,5 @@
 //= require_tree ../templates
 //= require AngularDevise/lib/devise
 //= require angular-bootstrap/ui-bootstrap-tpls
+//= require angular-placeholders/src/img/img
 //= require_tree .
