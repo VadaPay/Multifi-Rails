@@ -33,6 +33,11 @@ angular.module('multifiApp', ['ui.router',
       url: '/customers',
       templateUrl: '<%= asset_path("_customers.html") %>'
     })
+    .state('index.compose', {
+      url: '/compose',
+      controller: 'composeOfferCtrl',
+      templateUrl: '<%= asset_path("_composeoffer.html") %>'
+    })
     .state('index.groups', {
       url: '/groups',
       templateUrl: '<%= asset_path("_groups.html") %>'

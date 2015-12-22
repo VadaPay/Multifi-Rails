@@ -14,12 +14,12 @@
         </div>
         <div class="modal-body">
           <div class="row">
-            <div class="col-md-10">
+            <div class="col-sm-10">
               <div class="row">
                 <h1>Test Offer</h1>
               </div>
               <div class="row">
-                <div class="col-md-4">
+                <div class="col-sm-4">
                   <div class="row">
                     <img ph-img="500x300"  class="img-responsive img-polaroid"/>
                   </div>
@@ -32,19 +32,21 @@
                     </address>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <div class="row">
-                    <div class="col-md-2">
+                <div class="col-sm-6">
+                  <div class="">
                         <button class="btn btn-primary">Redeem</button>
-                    </div>
-                    <div class="col-md-4">
-                      <timer end-time="1451628000000">{{days}} days, {{hours}} hours, {{minutes}} minutes, {{seconds}} seconds.</timer>
-                    </div>
+                        <timer class="pull-right" end-time="1451628000000">{{days}} days, {{hours}} hours, {{minutes}} minutes, {{seconds}} seconds</timer>
+                  </div>
+                  <div class="">
+                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab. Sed ut perspiciatis unde omnis iste natus error sit
+                  </div>
+                  <div>
+                    <button class="btn btn-default">Share</button>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-2">
+            <div class="col-sm-2">
               <ul class="list-group">
                 <li class="list-group-item">
                   <a href="">Minimal</a>
@@ -61,6 +63,6 @@
         </div>
         <div class="modal-footer">
             <button class="btn btn-warning pull-left" type="button" ng-click="ok()">Cancel</button>
-            <button class="btn btn-success btn-lg pull-right" type="button" ng-click="cancel()">Use Template</button>
+            <a class="btn btn-success btn-lg pull-right" ng-click="ok()" ui-sref="index.compose">Use Template</button>
         </div>
 </script>
