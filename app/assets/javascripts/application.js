@@ -10,4 +10,6 @@
 //= require momentjs/min/locales
 //= require humanize-duration/humanize-duration
 //= require angular-timer/dist/angular-timer
+//= require ng-file-upload-shim/ng-file-upload-shim
+//= require ng-file-upload/ng-file-upload
 //= require_tree .
