@@ -8,6 +8,8 @@ Version: 0.0.0
 
 ```
 bundle install
+```
 
+```
 rails server
 ```
