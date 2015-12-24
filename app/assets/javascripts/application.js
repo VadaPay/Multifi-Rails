@@ -12,4 +12,6 @@
 //= require angular-timer/dist/angular-timer
 //= require ng-file-upload-shim/ng-file-upload-shim
 //= require ng-file-upload/ng-file-upload
+//= require angular-animate/angular-animate
+//=require v-accordion/dist/v-accordion
 //= require_tree .
