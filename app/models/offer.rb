@@ -18,6 +18,8 @@ class Offer
   field :country, type: String
   field :phone, type: String
   field :website, type: String
+  field :isDraft, type: Boolean
+  fiel :scheduledFor, type: DateTime 
 
   belongs_to :user
 end
