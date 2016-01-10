@@ -5,6 +5,10 @@ angular.module('multifiApp')
       $uibModalInstance.close();
     };
 
+    $scope.minimal = function () {
+      
+    };
+
     $scope.cancel = function () {
       $uibModalInstance.dismiss('cancel');
     };
