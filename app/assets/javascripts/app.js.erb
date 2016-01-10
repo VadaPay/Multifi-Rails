@@ -1,4 +1,12 @@
-angular.module('flapperNews', ['ui.router', 'templates', 'Devise'])
+angular.module('multifiApp', ['ui.router',
+'templates',
+'Devise',
+'ui.bootstrap',
+'placeholders.img',
+'timer',
+'ngFileUpload',
+'vAccordion'
+])
 .config([
   '$stateProvider',
   '$urlRouterProvider',
@@ -20,11 +28,17 @@ angular.module('flapperNews', ['ui.router', 'templates', 'Devise'])
     })
     .state('index.offers',{
       url: '/offers',
+      controller: 'offerCtrl',
       templateUrl: '<%= asset_path("_offers.html") %>'
     })
     .state('index.customers', {
       url: '/customers',
       templateUrl: '<%= asset_path("_customers.html") %>'
+    })
+    .state('index.compose', {
+      url: '/compose',
+      controller: 'composeOfferCtrl',
+      templateUrl: '<%= asset_path("_composeoffer.html") %>'
     })
     .state('index.groups', {
       url: '/groups',
