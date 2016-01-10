@@ -1,6 +1,13 @@
 <div class="wrapper wrapper-content">
-  <div class="row text-center">
+  <div ng-show="firstrun" class="row text-center">
     <h1>Create your first Offer</h1>
+  </div>
+  <div class="row text-center">
+    <div ng-repeat="offer in offers" class="col-md-4">
+      <div class="well">
+        <h3>{{offer.title}}</h3>
+      </div>
+    </div>
   </div>
   <div class="row text-center">
     <button type="submit" ng-click="open()" class="btn btn-lg btn-primary">Create Offer</button>

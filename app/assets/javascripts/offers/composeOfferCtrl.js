@@ -8,6 +8,7 @@ angular.module('multifiApp')
     $scope.offer.termsconditions = 'Test Test Test';
     $scope.offer.url = "app.multifi.io";
 
+
     $scope.createOffer = function () {
       $http.post('/offers.json', $scope.offer).then(function(response) {
         $state.go('index.offers');
