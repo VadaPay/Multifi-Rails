@@ -1,7 +1,18 @@
 angular.module('multifiApp')
 .controller('MainCtrl', [
   '$scope',
-  function ($scope) {
-    $scope.test = 'Hello world!';
+  '$state',
+  'Auth',
+
+  function ($scope, $state, Auth) {
+    // $scope.test = 'Hello world!';
+
+    $scope.logout = function(){
+      Auth.logout().then(function() {
+        $state.go('login');
+      }).catch(function() {
+        $state.go('login');
+      });
+    }
   }
 ]);
