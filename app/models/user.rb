@@ -26,6 +26,9 @@ class User
   field :last_sign_in_ip,    type: String
 
   has_many :offers
+  has_many :emailmessages
+  has_many :textmessages
+  has_many :groups
 
   ## Confirmable
   # field :confirmation_token,   type: String
