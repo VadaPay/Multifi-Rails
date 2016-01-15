@@ -5458,6 +5458,67 @@ body.body-small .vote-icon {
  * Made by Osman Nuri Okumus
  * Under MIT License
  */
+ .drop-box {
+    border: 1px dashed #ddd;
+    overflow: hidden;
+ }
+ .drop-box .progress {
+    margin: 55px 0 0;
+    border-radius: 0;
+    height: 10px;
+}
+ .drop-box .progress .progress-bar {
+    margin: 0 !important;
+}
+.drop-box .btn-primary {
+    background: none;
+    border: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    text-indent: -9999px;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+.drop-box .btn-primary:focus{
+    outline: none;
+    background: none;
+    color: #676a6c;
+    box-shadow: none;
+}
+.drop-box .btn-primary::after {
+    color: #676a6c;
+    content: "Click here to upload image";
+    left: 0;
+    padding-top: 32px;
+    position: absolute;
+    text-align: center;
+    text-indent: 0;
+    top: 0;
+    width: 100%;
+}
+.progress-holder {
+    overflow: hidden;
+    position: relative;
+    border: 1px dashed #ddd;
+    margin: 10px;
+    background: #f8f8f8;
+}
+.progress-holder .remove-new-photo {
+    color: #ff0000;
+    padding: 2px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+    background-color: rgba(255,255,255,.6);
+}
+.progress-holder img {
+    height: 65px;
+    margin: 0 auto;
+    display: block;
+}
 .metismenu .plus-minus,
 .metismenu .plus-times {
     float: right;

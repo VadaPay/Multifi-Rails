@@ -13,5 +13,7 @@
 //= require ng-file-upload-shim/ng-file-upload-shim
 //= require ng-file-upload/ng-file-upload
 //= require angular-animate/angular-animate
-//=require v-accordion/dist/v-accordion
+//= require v-accordion/dist/v-accordion
+//= require angular-sanitize/angular-sanitize
+//= require ng-s3upload/build/ng-s3upload
 //= require_tree .

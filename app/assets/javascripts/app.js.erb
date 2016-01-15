@@ -5,8 +5,13 @@ angular.module('multifiApp', ['ui.router',
 'placeholders.img',
 'timer',
 'ngFileUpload',
-'vAccordion'
+'vAccordion',
+'ngSanitize',
+'ngS3upload'
 ])
+.config(function(ngS3Config) {
+  ngS3Config.theme = 'bootstrap3';
+})
 .config([
   '$stateProvider',
   '$urlRouterProvider',
