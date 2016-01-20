@@ -1,0 +1,19 @@
+<div class="wrapper wrapper-content">
+  <div class="row">
+    <form class="form" ng-submit="addCustomer()">
+      <div class="form-group">
+          <label>Name</label>
+          <input type="text" class="form-control" ng-model="customer.name"/>
+      </div>
+      <div class="form-group">
+          <label>Email</label>
+          <input type="email" class="form-control" ng-model="customer.email"/>
+      </div>
+      <div class="form-group">
+          <label>Phone</label>
+          <input type="text" class="form-control" ng-model="customer.phone"/>
+      </div>
+      <button type="submit" class="btn btn-lg btn-primary">Add</button>
+    </form>
+  </div>
+</div>
