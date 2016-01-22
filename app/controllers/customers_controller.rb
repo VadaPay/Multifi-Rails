@@ -4,7 +4,7 @@ class CustomersController < ApplicationController
     before_filter :authenticate_user!, only: [:create]
 
     def index
-      respond_with Customer.all
+      respond_with Customer.where(user_id: current_user.id)
     end
 
     def show
