@@ -16,4 +16,5 @@
 //= require v-accordion/dist/v-accordion
 //= require angular-sanitize/angular-sanitize
 //= require ng-s3upload/build/ng-s3upload
+//= require angular-socialshare/src/js/angular-socialshare
 //= require_tree .
