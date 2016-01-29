@@ -33,7 +33,13 @@ angular.module('multifiApp', ['ui.router',
     })
     .state('index.customers', {
       url: '/customers',
+      controller: 'customersCtrl',
       templateUrl: '<%= asset_path("_customers.html") %>'
+    })
+    .state('index.addcustomer', {
+      url: '/addcustomer',
+      controller: 'addCustomerCtrl',
+      templateUrl: '<%= asset_path("_addcustomer.html") %>'
     })
     .state('index.compose', {
       url: '/compose',

@@ -29,6 +29,9 @@ Rails.application.routes.draw do
    resources :offers, only: [:create, :index, :show] do
    end
 
+   resources :customers, only: [:create, :index, :show] do
+   end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
