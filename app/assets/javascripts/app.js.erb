@@ -31,6 +31,10 @@ angular.module('multifiApp', ['ui.router',
       controller: 'offerCtrl',
       templateUrl: '<%= asset_path("_offers.html") %>'
     })
+    .state('index.offer',{
+      url: '/offers:id',
+      templateUrl: '<%= asset_path("_offer.html")%>'
+    })
     .state('index.customers', {
       url: '/customers',
       controller: 'customersCtrl',
