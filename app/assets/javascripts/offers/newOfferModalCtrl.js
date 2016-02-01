@@ -1,12 +1,15 @@
 angular.module('multifiApp')
   .controller('newOfferModalCtrl',
   function ($scope, $http, $uibModalInstance) {
-    $scope.ok = function () {
-      $uibModalInstance.close();
-    };
+    $scope.template = 1;
+    $scope.templates = [
+      'minimal',
+      'flat',
+      'material'
+    ];
 
-    $scope.minimal = function () {
-      
+    $scope.ok = function () {
+      $uibModalInstance.close($scope.template);
     };
 
     $scope.cancel = function () {

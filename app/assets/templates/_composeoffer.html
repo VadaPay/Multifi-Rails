@@ -21,11 +21,16 @@
             </div>
             <div class="form-group">
               <label for="inputEmail3" class="col-sm-2 control-label">Offer Image</label>
-              <div class="col-sm-offset-2 col-sm-10">
-                <div ngf-drop ngf-select ng-model="files" class="drop-box"
-                ngf-drag-over-class="'dragover'" ngf-multiple="true" ngf-allow-dir="true"
-                accept="image/*"
-                ngf-pattern="'image/*'">Drop images here or click to upload</div>
+              <div class="col-sm-10">
+                <!-- <div ngf-drop ngf-select ng-model="offer.remote_image_url" class="drop-box" ngf-drag-over-class="'dragover'" ngf-multiple="true" ngf-allow-dir="true" accept="image/*" ngf-pattern="'image/*'">
+                  Drop images here or click to upload
+                </div> -->
+                <div id="s3-upload-offer-container" class="drop-box" ng-show="!offer.remote_offer_url" s3-upload bucket="bucket" ng-model="offer.remote_offer_url" s3-upload-options="{getOptionsUri: s3OptionsUri, folder: 'avatar/'}">
+                </div>
+                <div class="progress-holder" ng-show="offer.remote_offer_url">
+                  <span class="remove-new-photo glyphicon glyphicon-remove" ng-click="image_remove()"></span>
+                  <img ng-src="{{offer.remote_offer_url}}" />
+                </div>
                 <div ngf-no-file-drop>File Drag/Drop is not supported for this browser</div>
               </div>
             </div>
@@ -354,34 +359,44 @@
         </uib-accordion-group>
       </uib-accordion>
     </div>
-    <div class="col-md-8">
+    <!-- Add classes on this div [minimal, flat, material]-->
+    <div class="col-md-8 template {{template}}">
       <div class="panel">
         <div class="panel-body">
           <div class="row">
-            <h2 ng-bind="offer.title"></h2>
+            <div class="col-md-12">
+              <h2 ng-bind="offer.title"></h2>
+            </div>
           </div>
           <div class="row">
             <div class="col-sm-4">
               <div class="row">
-                <img ph-img="500x300" class="img-responsive img-polaroid"/>
+                <div class="col-md-12">
+                  <img ng-show="!offer.remote_offer_url" ph-img="500x300" class="img-responsive img-polaroid"/>
+                  <img ng-show="offer.remote_offer_url" ng-src="{{offer.remote_offer_url}}" class="img-responsive img-polaroid"/>
+                </div>
               </div>
               <div class="row">
-                <address>
-                  <strong>Twitter, Inc.</strong><br>
-                  1355 Market Street, Suite 900<br>
-                  San Francisco, CA 94103<br>
-                  <abbr title="Phone">P:</abbr> (123) 456-7890
-                </address>
+                <div class="col-md-12">
+                  <address>
+                    <strong>Twitter, Inc.</strong><br>
+                    1355 Market Street, Suite 900<br>
+                    San Francisco, CA 94103<br>
+                    <abbr title="Phone">P:</abbr> (123) 456-7890
+                  </address>
+                </div>
               </div>
             </div>
             <div class="col-sm-6">
-              <div class="">
-                <button class="btn btn-primary">Redeem</button>
-                <timer class="pull-right" end-time="1451628000000">{{days}} days, {{hours}} hours, {{minutes}} minutes, {{seconds}} seconds</timer>
+              <div class="row">
+                <div class="col-md-12">
+                  <button class="btn btn-primary">Redeem</button>
+                  <time class="pull-right" end-time="1451628000000">{{days}} days, {{hours}} hours, {{minutes}} minutes, {{seconds}} seconds</time>
+                </div>
               </div>
               <div ng-bind="offer.details" class="">
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab. Sed ut perspiciatis unde omnis iste natus error sit
-              </div>
+              </p>
               <div>
                 <button class="btn btn-default">Share</button>
               </div>

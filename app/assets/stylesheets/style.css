@@ -5458,6 +5458,67 @@ body.body-small .vote-icon {
  * Made by Osman Nuri Okumus
  * Under MIT License
  */
+ .drop-box {
+    border: 1px dashed #ddd;
+    overflow: hidden;
+ }
+ .drop-box .progress {
+    margin: 55px 0 0;
+    border-radius: 0;
+    height: 10px;
+}
+ .drop-box .progress .progress-bar {
+    margin: 0 !important;
+}
+.drop-box .btn-primary {
+    background: none;
+    border: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    text-indent: -9999px;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+.drop-box .btn-primary:focus{
+    outline: none;
+    background: none;
+    color: #676a6c;
+    box-shadow: none;
+}
+.drop-box .btn-primary::after {
+    color: #676a6c;
+    content: "Click here to upload image";
+    left: 0;
+    padding-top: 32px;
+    position: absolute;
+    text-align: center;
+    text-indent: 0;
+    top: 0;
+    width: 100%;
+}
+.progress-holder {
+    overflow: hidden;
+    position: relative;
+    border: 1px dashed #ddd;
+    margin: 10px;
+    background: #f8f8f8;
+}
+.progress-holder .remove-new-photo {
+    color: #ff0000;
+    padding: 2px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+    background-color: rgba(255,255,255,.6);
+}
+.progress-holder img {
+    height: 65px;
+    margin: 0 auto;
+    display: block;
+}
 .metismenu .plus-minus,
 .metismenu .plus-times {
     float: right;
@@ -8090,3 +8151,90 @@ body.md-skin {
         display: none;
     }
 }
+.list-group .list-group-item {
+
+}
+.list-group button {
+    background: none;
+    border: none;
+    color: #337ab7;
+    padding: 0;
+}
+.sel-temp .list-group-item {padding: 0;}
+.sel-temp .list-group-item button {
+    display: block;
+    padding: 10px 15px;
+    text-align: left;
+    width: 100%;
+}
+.sel-temp .list-group-item button.selected {
+    background: #808080;
+    color: #fff;
+}
+.sel-temp .list-group-item button:hover, .sel-temp .list-group-item button:focus {
+    color: #fff;
+    background: #808080;
+}
+.minimal .col-sm-10,
+.minimal .panel {
+    background: #1a1a1a;
+    color: #f2f2f2;
+    font: 20px/1.3 'EB Garamond', serif;
+}
+.modal-content .col-sm-10 address,
+.template .panel address {
+    margin-top: 20px;
+    font-size: 15px;
+    overflow: hidden;
+}
+.modal-content .col-sm-10 button,
+.template .panel button {margin-bottom: 10px;}
+.modal-content .col-sm-10 p,
+.template .panel p { margin-bottom: 10px;}
+.modal-content .col-sm-10 time,
+.template .panel time {padding: 8px 0 0 0;font-size: 15px;}
+.minimal .col-sm-10 h1,
+.minimal .panel h1 {font-family: 'Oswald', sans-serif;font-weight: bold;}
+.minimal .col-sm-10 .btn-default,
+.minimal .panel .btn-default {
+    background-color: #f0ad4e;
+    border-color: #eea236;
+    color: #ffffff;
+}
+.flat .col-sm-10,
+.flat .panel  {
+    background: #88ceda;
+    color: #434a54;
+    font: 14px/1.31 'Open Sans', sans-serif;
+}
+.flat .col-sm-10 h1,
+.flat .panel h1 {font-family: 'Open Sans', sans-serif;font-weight: bold;font-size: 18px;}
+.flat .col-sm-10 .btn-default,
+.flat .panel .btn-default {
+    background-color: #8cc152;
+    border-color: #8cc152;
+ }
+.modal-content .flat .col-sm-10 address,
+.flat .panel address {font-size: 12px;}
+.modal-content .flat .col-sm-10 time,
+.modal-content .material .col-sm-10 time,
+.flat .panel time,
+.material .panel time {font-size: 12px;}
+.material .col-sm-10,
+.material .panel {
+    background-color: #ffffff;
+    border: 0 none;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 19px;
+    font: 14px/1.3 'Roboto', sans-serif;
+    color: #333;
+}
+.material .col-sm-10 h1,
+.material .panel h1 {font-family: 'Roboto', sans-serif;font-weight: 700;}
+.modal-content .material .col-sm-10 address,
+.material .panel address {font-size:12px;}
