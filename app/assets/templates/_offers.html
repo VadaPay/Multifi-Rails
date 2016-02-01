@@ -6,6 +6,7 @@
     <div ng-repeat="offer in offers" class="col-md-4">
       <div class="well">
         <h3>{{offer.title}}</h3>
+        <a ui-sref='offer({id: offer._id.$oid})'>View</a>
       </div>
     </div>
   </div>
