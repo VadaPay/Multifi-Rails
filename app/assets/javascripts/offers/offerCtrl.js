@@ -10,11 +10,9 @@ angular.module('multifiApp')
       if ($scope.offers.length !== 0) {
         $scope.firstrun = false;
       }
-
     });
 
     $scope.open = function (size) {
-
       var modalInstance = $uibModal.open({
         animation: true,
         size: 'lg',

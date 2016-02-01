@@ -1,12 +1,20 @@
 angular.module('multifiApp')
 .controller('composeOfferCtrl',[
-  '$scope','$http','$state',
-  function ($scope, $http, $state) {
+  '$scope','$http','$state', '$stateParams',
+  function ($scope, $http, $state, $stateParams) {
     $scope.offer = {}
     $scope.offer.title = 'Test Offer';
     $scope.offer.details = 'Test Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab. Sed ut perspiciatis unde omnis iste natus error sit';
     $scope.offer.termsconditions = 'Test Test Test';
     $scope.offer.url = "app.multifi.io";
+
+    $scope.template_id = $stateParams.id;
+    $scope.templates = [
+      'minimal',
+      'flat',
+      'material'
+    ];
+    $scope.template = $scope.templates[($scope.template_id - 1)];
 
     $scope.uploading = $scope.rejected = false;
     $scope.s3OptionsUri = 'aws/s3_access_token?upload_type=avatar';

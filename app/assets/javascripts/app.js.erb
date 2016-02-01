@@ -42,7 +42,7 @@ angular.module('multifiApp', ['ui.router',
       templateUrl: '<%= asset_path("_customers.html") %>'
     })
     .state('index.compose', {
-      url: '/compose',
+      url: '/compose/{id:[0-9]+}',
       controller: 'composeOfferCtrl',
       templateUrl: '<%= asset_path("_composeoffer.html") %>'
     })
