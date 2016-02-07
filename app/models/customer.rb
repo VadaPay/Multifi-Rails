@@ -6,6 +6,7 @@ class Customer
   field :phone, type: String
 
   belongs_to :group
+  belongs_to :user
 
 
 end

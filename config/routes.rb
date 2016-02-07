@@ -20,6 +20,8 @@ Rails.application.routes.draw do
 
   get 'login/index'
 
+  get 'aws/s3_access_token', to: 'aws#s3_access_token'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -27,6 +29,9 @@ Rails.application.routes.draw do
    root to: 'application#angular'
 
    resources :offers, only: [:create, :index, :show] do
+   end
+
+   resources :customers, only: [:create, :index, :show] do
    end
 
   # Example of regular route:

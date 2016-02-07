@@ -29,6 +29,7 @@ class User
   has_many :emailmessages
   has_many :textmessages
   has_many :groups
+  has_many :customers
 
   ## Confirmable
   # field :confirmation_token,   type: String

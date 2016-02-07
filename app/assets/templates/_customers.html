@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-4 text-center">
       <h1>Total Customers</h1>
-      <p class="label label-primary">0</p>
+      <p class="label label-primary">{{ totalCustomers }}</p>
     </div>
     <div class="col-md-8 text-center">
       <div class="row">
@@ -26,7 +26,7 @@
       <div class="row">
         <div class="col-md-2">
           <i class="fa fa-2x fa-instagram"></i>
-          <p>Facebook</p>
+          <p>Instagram</p>
         </div>
         <div class="col-md-2">
           <i class="fa fa-2x fa-linkedin"></i>
@@ -38,7 +38,7 @@
 <div class="row text-center">
   <div class="col-md-12">
     <h1>Add Mobile or Email Customers</h1>
-    <button type="submit" class="btn btn-success btn-lg">Add Customer</button>
+    <a ui-sref="index.addcustomer" class="btn btn-success btn-lg">Add Customer</a>
   </div>
 </div>
 </div>

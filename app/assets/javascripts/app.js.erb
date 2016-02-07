@@ -5,8 +5,14 @@ angular.module('multifiApp', ['ui.router',
 'placeholders.img',
 'timer',
 'ngFileUpload',
-'vAccordion'
+'vAccordion',
+'ngSanitize',
+'ngS3upload',
+'720kb.socialshare'
 ])
+.config(function(ngS3Config) {
+  ngS3Config.theme = 'bootstrap3';
+})
 .config([
   '$stateProvider',
   '$urlRouterProvider',
@@ -33,10 +39,16 @@ angular.module('multifiApp', ['ui.router',
     })
     .state('index.customers', {
       url: '/customers',
+      controller: 'customersCtrl',
       templateUrl: '<%= asset_path("_customers.html") %>'
     })
+    .state('index.addcustomer', {
+      url: '/addcustomer',
+      controller: 'addCustomerCtrl',
+      templateUrl: '<%= asset_path("_addcustomer.html") %>'
+    })
     .state('index.compose', {
-      url: '/compose',
+      url: '/compose/{id:[0-9]+}',
       controller: 'composeOfferCtrl',
       templateUrl: '<%= asset_path("_composeoffer.html") %>'
     })
@@ -69,6 +81,11 @@ angular.module('multifiApp', ['ui.router',
       url: '/register',
       templateUrl: '<%= asset_path("_register.html") %>',
       controller: 'AuthCtrl'
+    })
+    .state('offer',{
+      url: '/offer/:id',
+      controller: 'viewOfferCtrl',
+      templateUrl: '<%= asset_path("_offer.html")%>'
     });
 
     $urlRouterProvider.otherwise('login');
