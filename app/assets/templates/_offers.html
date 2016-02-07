@@ -6,70 +6,129 @@
     <div ng-repeat="offer in offers" class="col-md-4">
       <div class="well">
         <h3>{{offer.title}}</h3>
+        <a target="_blank" ui-sref='offer({id: offer._id.$oid})'>View</a>
       </div>
     </div>
   </div>
   <div class="row text-center">
     <button type="submit" ng-click="open()" class="btn btn-lg btn-primary">Create Offer</button>
   </div>
+
+  <br><br><br><br>
+  <div class="row">
+      <div class="col-md-3">
+        <div class="col-md-1">
+          <i class="fa fa-2x fa-facebook"></i>
+        </div>
+        <div class="col-md-2">
+          <p>FACEBOOK</p>
+          <a href="javascript:void(0)"
+            socialshare
+            socialshare-provider="facebook"
+            socialshare-text="720kb AngularJS Socialshare"
+            socialshare-hashtags="angularjs, angular-socialshare"
+            socialshare-url="http://720kb.net">
+            Link
+          </a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="col-md-1">
+          <i class="fa fa-2x fa-twitter"></i>
+        </div>
+        <div class="col-md-2">
+          <p>TWITTER</p>
+          <a href="javascript:void(0)"
+            socialshare
+            socialshare-provider="twitter"
+            socialshare-text="720kb AngularJS Socialshare"
+            socialshare-hashtags="angularjs, angular-socialshare"
+            socialshare-url="http://720kb.net">
+            Link
+          </a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="col-md-1">
+          <i class="fa fa-2x fa-instagram"></i>
+        </div>
+        <div class="col-md-2">
+          <p>INSTAGRAM</p>
+          <button class="btn btn-primary">Link</button>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="col-md-1">
+          <i class="fa fa-2x fa-facebook"></i>
+        </div>
+        <div class="col-md-2">
+          <p>LINKEDIN</p>
+          <a href="javascript:void(0)"
+            socialshare
+            socialshare-provider="linkedin"
+            socialshare-text="720kb AngularJS Socialshare"
+            socialshare-hashtags="angularjs, angular-socialshare"
+            socialshare-url="http://720kb.net">
+            Link
+          </a>
+        </div>
+      </div>
+    </div>
 </div>
 
-
 <script type="text/ng-template" id="CreateOfferModal.html">
-        <div class="modal-header">
-            <h3 class="modal-title">Choose a template</h3>
+  <div class="modal-header">
+    <h3 class="modal-title">Choose a template</h3>
+  </div>
+  <div class="modal-body {{templates[(template - 1)]}}">
+    <div class="row">
+      <div class="col-sm-10">
+        <div class="row">
+          <div class="col-sm-12">
+            <h1>Test Offer</h1>
+          </div>
         </div>
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-sm-10">
-              <div class="row">
-                <h1>Test Offer</h1>
-              </div>
-              <div class="row">
-                <div class="col-sm-4">
-                  <div class="row">
-                    <img ph-img="500x300"  class="img-responsive img-polaroid"/>
-                  </div>
-                  <div class="row">
-                    <address>
-                      <strong>Twitter, Inc.</strong><br>
-                        1355 Market Street, Suite 900<br>
-                        San Francisco, CA 94103<br>
-                        <abbr title="Phone">P:</abbr> (123) 456-7890
-                    </address>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="">
-                        <button class="btn btn-primary">Redeem</button>
-                        <timer class="pull-right" end-time="1451628000000">{{days}} days, {{hours}} hours, {{minutes}} minutes, {{seconds}} seconds</timer>
-                  </div>
-                  <div class="">
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab. Sed ut perspiciatis unde omnis iste natus error sit
-                  </div>
-                  <div>
-                    <button class="btn btn-default">Share</button>
-                  </div>
-                </div>
-              </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <img ph-img="500x300" class="img-responsive img-polaroid"/>
+            <address>
+              <strong>Twitter, Inc.</strong><br>
+                1355 Market Street, Suite 900<br>
+                San Francisco, CA 94103<br>
+                <abbr title="Phone">P:</abbr> (123) 456-7890
+            </address>
+          </div>
+          <div class="col-sm-6">
+            <div class="">
+              <button class="btn btn-primary">Redeem</button>
+              <timer class="pull-right" end-time="1451628000000">{{days}} days, {{hours}} hours, {{minutes}} minutes, {{seconds}} seconds</timer>
             </div>
-            <div class="col-sm-2">
-              <ul class="list-group">
-                <li class="list-group-item">
-                  <a href="">Minimal</a>
-                </li>
-                <li class="list-group-item">
-                  <a href="">Flat</a>
-                </li>
-                <li class="list-group-item">
-                  <a href="">Material</a>
-                </li>
-              </ul>
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, aque ipsa quae ab. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab. Sed ut perspiciatis unde omnis iste natus error sit
+            </p>
+            <div>
+              <button class="btn btn-default">Share</button>
             </div>
           </div>
         </div>
-        <div class="modal-footer">
-            <button class="btn btn-warning pull-left" type="button" ng-click="ok()">Cancel</button>
-            <a class="btn btn-success btn-lg pull-right" ng-click="ok()" ui-sref="index.compose">Use Template</a>
-        </div>
+      </div>
+      <div class="col-sm-2">
+        <ul class="list-group sel-temp">
+          <li class="list-group-item">
+            <button ng-click="template = 1" ng-class="{'selected': template==1}">Minimal</button>
+          </li>
+          <li class="list-group-item">
+            <button ng-click="template = 2" ng-class="{'selected': template==2}">Flat</button>
+          </li>
+          <li class="list-group-item">
+            <button ng-click="template = 3" ng-class="{'selected': template==3}">Material</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-warning pull-left" type="button" ng-click="ok()">Cancel</button>
+    <a class="btn btn-success btn-lg pull-right" ng-click="ok()" ui-sref="index.compose({id: template})">Use Template</a>
+  </div>
 </script>
