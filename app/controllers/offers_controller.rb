@@ -17,7 +17,7 @@ class OffersController < ApplicationController
 
   private
   def post_params
-    params.require(:offer).permit(:details, :title, :termsconditions, :url, :address1, :address2, :city)
+    params.require(:offer).permit(:details, :title, :termsconditions, :url, :address1, :address2, :city, :theme, :companyname)
   end
 
 end
