@@ -1,7 +1,7 @@
 angular.module('multifiApp')
 .controller('composeOfferCtrl',[
-  '$scope','$http','$state',' $stateParams',
-  function ($scope, $http, $state,  $stateParams, ) {
+  '$scope', '$http','$state',' $stateParams',
+  function ($scope, $http, $state, $stateParams) {
     $scope.offer = {};
     // $scope.offer.title = 'Test Offer';
     // $scope.offer.details = 'Test Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab. Sed ut perspiciatis unde omnis iste natus error sit';

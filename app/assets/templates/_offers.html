@@ -6,7 +6,7 @@
     <div ng-repeat="offer in offers" class="col-md-4">
       <div class="well">
         <h3>{{offer.title}}</h3>
-        <a ui-sref='offer({id: offer._id.$oid})'>View</a>
+        <a target="_blank" ui-sref='offer({id: offer._id.$oid})'>View</a>
       </div>
     </div>
   </div>
@@ -101,7 +101,7 @@
           <div class="col-sm-6">
             <div class="">
               <button class="btn btn-primary">Redeem</button>
-              <time class="pull-right" end-time="1451628000000">{{days}} days, {{hours}} hours, {{minutes}} minutes, {{seconds}} seconds</time>
+              <timer class="pull-right" end-time="1451628000000">{{days}} days, {{hours}} hours, {{minutes}} minutes, {{seconds}} seconds</timer>
             </div>
             <p>
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, aque ipsa quae ab. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab. Sed ut perspiciatis unde omnis iste natus error sit
