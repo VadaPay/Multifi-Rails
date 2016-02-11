@@ -17,4 +17,6 @@
 //= require angular-sanitize/angular-sanitize
 //= require ng-s3upload/build/ng-s3upload
 //= require angular-socialshare/src/js/angular-socialshare
+//= require zingchart/client/zingchart.min
+//= require ZingChart-AngularJS/src/zingchart-angularjs
 //= require_tree .
