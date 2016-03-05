@@ -8,7 +8,8 @@ angular.module('multifiApp', ['ui.router',
 'vAccordion',
 'ngSanitize',
 'ngS3upload',
-'720kb.socialshare'
+'720kb.socialshare',
+'zingchart-angularjs'
 ])
 .config(function(ngS3Config) {
   ngS3Config.theme = 'bootstrap3';
@@ -70,7 +71,8 @@ angular.module('multifiApp', ['ui.router',
     })
     .state('index.reports', {
       url: '/reports',
-      templateUrl: '<%= asset_path("_reports.html") %>'
+      templateUrl: '<%= asset_path("_reports.html") %>',
+      controller: 'ReportsCtrl'
     })
     .state('login', {
       url: '/login',

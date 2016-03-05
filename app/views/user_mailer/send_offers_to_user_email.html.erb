@@ -1,0 +1,25 @@
+<p> Hello Dear, </p>
+
+<p style="font: 12px/1 arial,sans-serif;margin: 0 0 20px;">You have following offers:</p>
+<table>
+	<thead>
+		<th>Title</th>
+		<th>Details</th>
+	</thead>
+	<tbody>
+		<% @offers.each do |offer| %>
+			<tr>
+				<td><%= offer.title%></td>
+				<td><%= offer.details%></td>
+			</tr>
+		<% end %>		
+	</tbody>
+</table>
+
+<p style="font: 12px/1 arial,sans-serif;margin: 0 0 20px;">You can login to http://app.multifi.io to get more details about your offers.</p>
+
+<p style="font: 12px/1 arial,sans-serif;margin: 0 0 20px;">Have a great day!</p>
+
+<p style="font: 12px/1 arial,sans-serif;margin: 0 0 20px;"> Sincerely, </p>
+
+<p style="font: 12px/1 arial,sans-serif;margin: 0 0 20px;"> The Multifi Team </p>
