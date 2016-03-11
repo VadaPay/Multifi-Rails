@@ -26,6 +26,9 @@ gem 'devise', '~> 3.4.0'
 
 gem 'angular_rails_csrf'
 
+gem 'coupon_code'
+
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

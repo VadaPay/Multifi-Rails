@@ -4,13 +4,14 @@ angular.module('multifiApp')
   function ($scope, $http, $state, $stateParams) {
 
     $scope.coupons = 0;
-    
+
 
     $scope.offer = {}
     $scope.offer.title = 'Test Offer';
     $scope.offer.details = 'Test Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab. Sed ut perspiciatis unde omnis iste natus error sit';
     $scope.offer.termsconditions = 'Test Test Test';
     $scope.offer.url = "app.multifi.io";
+    $scope.offer.couponlimit = 10;
 
 
     $scope.template_id = $stateParams.id;

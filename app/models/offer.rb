@@ -20,7 +20,8 @@ class Offer
   field :website, type: String
   field :isDraft, type: Boolean
   field :scheduledFor, type: DateTime
+  field :couponlimit, type: Integer
 
   belongs_to :user
-  has_many :couponcodes
+  has_many :coupons
 end
