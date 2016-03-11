@@ -36,7 +36,7 @@ class OffersController < ApplicationController
 
       coupon.code = ccode
       coupon.redeemed = false
-      # coupon.offer_id = offer_id
+      coupon.offers_id = offer._id
 
       coupon.save
 
