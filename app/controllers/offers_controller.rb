@@ -7,7 +7,7 @@ class OffersController < ApplicationController
 
 
   def index
-    respond_with Offer.all
+    respond_with Offer.where(user_id: current_user.id)
   end
 
   def show
@@ -41,8 +41,6 @@ class OffersController < ApplicationController
       coupon.save
 
       i = i + 1
-      # offer.coupons.push(coupon)
-
     end
     respond_with offer
   end
