@@ -1,7 +1,7 @@
 angular.module('multifiApp')
 .controller('composeOfferCtrl',[
-  '$scope','$http','$state', '$stateParams',
-  function ($scope, $http, $state, $stateParams) {
+  '$scope','$http','$state', '$stateParams', 'moment',
+  function ($scope, $http, $state, $stateParams, moment) {
 
     $scope.coupons = 0;
 
@@ -12,6 +12,17 @@ angular.module('multifiApp')
     $scope.offer.termsconditions = 'Test Test Test';
     $scope.offer.url = "app.multifi.io";
     $scope.offer.couponlimit = 10;
+
+
+    // $scope.expiry = moment();
+    $scope.expirydate = moment().unix();
+
+
+    $scope.changeExpiry = function (newValue, oldValue) {
+      // $scope.expirydate = newValue.unix();
+      $scope.expirydate = moment(newValue).unix();
+      console.log($scope.expirydate);
+    };
 
 
     $scope.template_id = $stateParams.id;
