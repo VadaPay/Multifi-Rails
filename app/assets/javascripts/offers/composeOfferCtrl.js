@@ -12,16 +12,18 @@ angular.module('multifiApp')
     $scope.offer.termsconditions = 'Test Test Test';
     $scope.offer.url = "app.multifi.io";
     $scope.offer.couponlimit = 10;
-
+    $scope.offer.expiry = {};
+    // $scope.offer.expiry = moment();
 
     // $scope.expiry = moment();
-    $scope.expirydate = moment().unix();
-
+    // $scope.expirydate = moment().unix();
+    //
+    //
 
     $scope.changeExpiry = function (newValue, oldValue) {
-      // $scope.expirydate = newValue.unix();
-      $scope.expirydate = moment(newValue).unix();
-      console.log($scope.expirydate);
+      // console.log(newValue);
+      $scope.offer.expiry = newValue;
+      console.log($scope.offer);
     };
 
 
@@ -57,10 +59,22 @@ angular.module('multifiApp')
     });
     $scope.image_remove = function() {
       $scope.offer.remote_offer_url = '';
-    }
+    };
+
+
+    $scope.scheduleOffer = function () {
+      console.log($scope.offer);
+    };
+
+    $scope.saveAsDraft = function() {
+      $scope.offer.isDraft = true;
+      $http.post('/offers.json', $scope.offer).then(function(response) {
+        $state.go('index.offers');
+      });
+    };
 
     $scope.createOffer = function () {
-
+      $scope.offer.isDraft = false;
       console.log($scope.offer);
 
       $http.post('/offers.json', $scope.offer).then(function(response) {

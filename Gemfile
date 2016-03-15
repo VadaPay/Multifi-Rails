@@ -28,6 +28,7 @@ gem 'angular_rails_csrf'
 
 gem 'coupon_code'
 
+gem 'sentry-raven'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
