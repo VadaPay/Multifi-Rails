@@ -1,7 +1,7 @@
 # Multifi Rails application
 
 
-Version: 0.0.4
+Version: 0.0.6
 
 
 ## How to Build and run

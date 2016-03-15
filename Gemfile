@@ -1,4 +1,4 @@
-# app version 0.0.5
+# app version 0.0.6
 
 
 source 'https://rubygems.org'
@@ -25,6 +25,10 @@ gem 'devise', '~> 3.4.0'
 
 
 gem 'angular_rails_csrf'
+
+gem 'coupon_code'
+
+gem 'sentry-raven'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -55,4 +59,7 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'pry-rails'
 end
+
+gem 'whenever', :require => false

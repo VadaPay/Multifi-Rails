@@ -3,7 +3,7 @@ class Offer
   field :title, type: String
   field :details, type: String
   field :picture, type: String
-  field :expiry, type: Time
+  field :expiry, type: DateTime
   field :termsconditions, type: String
   field :theme, type: String
   field :redemptionmethod, type: String
@@ -19,8 +19,10 @@ class Offer
   field :phone, type: String
   field :website, type: String
   field :isDraft, type: Boolean
+  field :isScheduled, type: Boolean
   field :scheduledFor, type: DateTime
+  field :couponlimit, type: Integer
 
   belongs_to :user
-  has_many :couponcodes
+  has_many :coupons
 end

@@ -28,5 +28,9 @@ module MultifiApp
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+    Raven.configure do |config|
+      config.dsn = 'https://3a4c26e6de0341bf9793507c489ee86e:a018c7f0ce6f430185114bdf91a4b6c0@app.getsentry.com/70549'
+      config.environments = ['staging', 'production']
+    end
   end
 end
