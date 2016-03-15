@@ -10,10 +10,16 @@ angular.module('multifiApp')
 
     $scope.liveoffers = 0;
 
+    $scope.scheduledoffers = 0;
+
     $scope.customers = 0;
 
-    $http.get('/offers.json').then(function (response) {
+    $http.get('/offers.json', {'scheduled' : false}).then(function (response) {
       $scope.liveoffers  = response.data.length;
+    });
+
+    $http.get('/offers.json', {'scheduled' : true}).then(function (response) {
+      $scope.scheduledoffers = response.data.length;
     });
 
     $http.get('/customers.json').then(function(response) {

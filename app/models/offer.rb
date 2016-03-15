@@ -19,6 +19,7 @@ class Offer
   field :phone, type: String
   field :website, type: String
   field :isDraft, type: Boolean
+  field :isScheduled, type: Boolean
   field :scheduledFor, type: DateTime
   field :couponlimit, type: Integer
 

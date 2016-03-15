@@ -7,7 +7,13 @@ class OffersController < ApplicationController
 
 
   def index
-    respond_with Offer.where(user_id: current_user.id)
+    puts(params[:scheduled])
+    
+    if params[:scheduled] == false
+      respond_with Offer.where({user_id: current_user.id, isDraft: false})
+    else
+      respond_with Offer.where({user_id: current_user.id, isDraft: false, isScheduled: true})
+    end
   end
 
   def show
@@ -47,7 +53,7 @@ class OffersController < ApplicationController
 
   private
   def post_params
-    params.require(:offer).permit(:details, :title, :termsconditions, :url, :address1, :address2, :city, :theme, :companyname, :couponlimit, :isDraft, :expiry)
+    params.require(:offer).permit(:details, :title, :termsconditions, :url, :address1, :address2, :city, :theme, :companyname, :couponlimit, :isDraft, :expiry, :isScheduled, :scheduledFor)
   end
 
 end
