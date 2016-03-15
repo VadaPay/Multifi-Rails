@@ -8,6 +8,7 @@
 //= require angular-placeholders/src/img/img
 //= require momentjs/moment
 //= require momentjs/min/locales
+//= require angular-moment/angular-moment
 //= require humanize-duration/humanize-duration
 //= require angular-timer/dist/angular-timer
 //= require ng-file-upload-shim/ng-file-upload-shim
@@ -19,4 +20,5 @@
 //= require angular-socialshare/src/js/angular-socialshare
 //= require zingchart/client/zingchart.min
 //= require ZingChart-AngularJS/src/zingchart-angularjs
+//= require angular-moment-picker/dist/angular-moment-picker
 //= require_tree .

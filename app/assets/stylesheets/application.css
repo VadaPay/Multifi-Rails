@@ -12,6 +12,7 @@
  *
  *= require bootstrap/dist/css/bootstrap
  *= require v-accordion/dist/v-accordion
+ *= require angular-moment-picker/dist/angular-moment-picker
  *= require_tree .
  *= require_self
  */
