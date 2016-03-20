@@ -10,14 +10,13 @@
         </div>
         <div class="panel-body">
           <p>Total Coupons: <span>{{offer.couponlimit}}</span></p>
-          <p ng-show="offer.expiry">Expires on: <span>{{offer.expiry | amDateFormat:'MM.DD.YYYY HH:mm:ss'}}</span>
+          <!-- <p ng-show="offer.expiry">Expires on: <span>{{offer.expiry | amDateFormat:'MM.DD.YYYY HH:mm:ss'}}</span> -->
         </div>
         <div class="panel-footer">
           <div class="row">
             <a ng-show="offer.isDraft" class="btn btn-warning" ui-sref='editoffer({id: offer._id.$oid})'><i class="fa fa-pencil"></i> Edit Draft</a>
-          </div>
-          <div class="row">
             <a target="_blank" class="btn btn-primary" ui-sref='offer({id: offer._id.$oid})'><i class="fa fa-eye"></i> View</a>
+
           </div>
         </div>
       </div>
@@ -28,65 +27,6 @@
   </div>
 
   <br><br><br><br>
-  <div class="row">
-      <div class="col-md-3">
-        <div class="col-md-1">
-          <i class="fa fa-2x fa-facebook"></i>
-        </div>
-        <div class="col-md-2">
-          <p>FACEBOOK</p>
-          <a href="javascript:void(0)"
-            socialshare
-            socialshare-provider="facebook"
-            socialshare-text="720kb AngularJS Socialshare"
-            socialshare-hashtags="angularjs, angular-socialshare"
-            socialshare-url="http://720kb.net">
-            Link
-          </a>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="col-md-1">
-          <i class="fa fa-2x fa-twitter"></i>
-        </div>
-        <div class="col-md-2">
-          <p>TWITTER</p>
-          <a href="javascript:void(0)"
-            socialshare
-            socialshare-provider="twitter"
-            socialshare-text="720kb AngularJS Socialshare"
-            socialshare-hashtags="angularjs, angular-socialshare"
-            socialshare-url="http://720kb.net">
-            Link
-          </a>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="col-md-1">
-          <i class="fa fa-2x fa-instagram"></i>
-        </div>
-        <div class="col-md-2">
-          <p>INSTAGRAM</p>
-          <button class="btn btn-primary">Link</button>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="col-md-1">
-          <i class="fa fa-2x fa-facebook"></i>
-        </div>
-        <div class="col-md-2">
-          <p>LINKEDIN</p>
-          <a href="javascript:void(0)"
-            socialshare
-            socialshare-provider="linkedin"
-            socialshare-text="720kb AngularJS Socialshare"
-            socialshare-hashtags="angularjs, angular-socialshare"
-            socialshare-url="http://720kb.net">
-            Link
-          </a>
-        </div>
-      </div>
-    </div>
 </div>
 
 <script type="text/ng-template" id="CreateOfferModal.html">

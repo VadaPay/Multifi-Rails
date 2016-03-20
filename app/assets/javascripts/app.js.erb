@@ -33,6 +33,7 @@ angular.module('multifiApp', ['ui.router',
     })
     .state('index.redeem', {
       url: '/redeem',
+      controller: 'redeemCouponCtrl',
       templateUrl: '<%= asset_path("_redeem.html") %>'
     })
     .state('index.offers',{

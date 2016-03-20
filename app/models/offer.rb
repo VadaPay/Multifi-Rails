@@ -3,6 +3,7 @@ class Offer
   field :title, type: String
   field :details, type: String
   field :picture, type: String
+  field :remote_offer_url, type:String
   field :expiry, type: DateTime
   field :termsconditions, type: String
   field :theme, type: String
