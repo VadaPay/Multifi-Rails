@@ -31,6 +31,9 @@ Rails.application.routes.draw do
    resources :offers, only: [:create, :index, :show, :update] do
    end
 
+   resources :coupons do
+   end
+
    resources :customers, only: [:create, :index, :show] do
    end
 

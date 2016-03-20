@@ -2,11 +2,11 @@
   <div class="form-group text-center">
     <div class="row">
     <div class="col-sm-12">
-      <input type="text" placeholder="Enter Coupon Code" class="text-center form-control input-lg m-b">
+      <input ng-model="coupon.code" type="text" placeholder="Enter Coupon Code" class="text-center form-control input-lg m-b">
     </div>
   </div>
   <div class="row">
-    <button type="submit" class="btn btn-lg btn-primary">LookUp</button>
+    <button ng-click="redeemCoupon()" type="submit" class="btn btn-lg btn-primary">LookUp</button>
   </div>
   </div>
 
