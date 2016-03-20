@@ -1,19 +1,26 @@
 # require 'securerandom'
 require 'coupon_code'
 
+# require 'logging'
+
+
+
 class OffersController < ApplicationController
 
   before_filter :authenticate_user!, only: [:create]
 
 
   def index
-    puts(params[:scheduled])
-    
-    if params[:scheduled] == false
+
+    # log = Logging.logger(STDOUT)
+
+    logger.debug "this debug message will not be output by the logger"
+
+    # if params[:scheduled] == false
       respond_with Offer.where({user_id: current_user.id, isDraft: false})
-    else
-      respond_with Offer.where({user_id: current_user.id, isDraft: false, isScheduled: true})
-    end
+    # else
+      # respond_with Offer.where({user_id: current_user.id, isDraft: false, isScheduled: true})
+    # end
   end
 
   def show
