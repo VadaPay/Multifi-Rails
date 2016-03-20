@@ -7,7 +7,7 @@ require 'coupon_code'
 
 class OffersController < ApplicationController
 
-  before_filter :authenticate_user!, only: [:create]
+  before_filter :authenticate_user!, only: [:index , :create, :update]
 
 
   def index

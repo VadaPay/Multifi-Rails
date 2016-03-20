@@ -55,8 +55,9 @@ function($scope, $stateParams, $http, $state, moment){
 
     $scope.scheduleOffer = function () {
       // console.log($scope.offer);
+      $scope.offer.isDraft = false;
       $scope.offer.isScheduled = true;
-      $http.post('/offers.json', $scope.offer).then(function(response) {
+      $http.put('/offers/' + $stateParams.id + '.json', $scope.offer).then(function(response) {
         $state.go('index.offers');
       });
     };
@@ -72,7 +73,7 @@ function($scope, $stateParams, $http, $state, moment){
       $scope.offer.isDraft = false;
       console.log($scope.offer);
 
-      $http.post('/offers.json', $scope.offer).then(function(response) {
+      $http.put('/offers/' + $stateParams.id + '.json', $scope.offer).then(function(response) {
         $state.go('index.offers');
       });
     };
