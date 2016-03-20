@@ -33,6 +33,7 @@ angular.module('multifiApp', ['ui.router',
     })
     .state('index.redeem', {
       url: '/redeem',
+      controller: 'redeemCouponCtrl',
       templateUrl: '<%= asset_path("_redeem.html") %>'
     })
     .state('index.offers',{
@@ -90,6 +91,11 @@ angular.module('multifiApp', ['ui.router',
       url: '/offer/:id',
       controller: 'viewOfferCtrl',
       templateUrl: '<%= asset_path("_offer.html")%>'
+    })
+    .state('editoffer',{
+      url: '/editoffer/:id',
+      controller: 'editOfferCtrl',
+      templateUrl: '<%= asset_path("_editOffer.html")%>'
     });
 
     $urlRouterProvider.otherwise('login');

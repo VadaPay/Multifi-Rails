@@ -80,6 +80,12 @@ GEM
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
     json (1.8.3)
+    little-plugger (1.1.4)
+    logging (2.1.0)
+      little-plugger (~> 1.1)
+      multi_json (~> 1.10)
+    logging-rails (0.5.0)
+      logging (>= 1.8)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
@@ -108,6 +114,8 @@ GEM
       slop (~> 3.4)
     pry-rails (0.3.3)
       pry (>= 0.9.10)
+    quiet_assets (1.1.0)
+      railties (>= 3.1, < 5.0)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -190,9 +198,11 @@ DEPENDENCIES
   devise (~> 3.4.0)
   font-awesome-rails (= 4.3.0.0)
   jbuilder (~> 2.0)
+  logging-rails
   mongoid (~> 5.0.0)
   novus-nvd3-rails
   pry-rails
+  quiet_assets
   rails (= 4.2.4)
   responders (~> 2.0)
   sass-rails (~> 5.0)

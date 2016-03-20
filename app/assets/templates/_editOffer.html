@@ -1,6 +1,6 @@
 <div class="wrapper wrapper-content">
   <div class="row text-center">
-    <h1>Create a New Offer</h1>
+    <h1>Edit Offer</h1>
   </div>
   <div class="row">
     <div class="col-md-4">
@@ -48,10 +48,10 @@
              <label class="col-sm-3 control-label">Schedule Date</label>
              <div class="col-sm-9">
                <input class="form-control"
-                  ng-model="expiry"
+                  ng-model="schedule"
                   ng-model-options="{ updateOn: 'blur' }"
                   placeholder="Select a date..."
-                  moment-picker="expiry" locale="en" change="changeSchedule(newValue, oldValue)"/>
+                  moment-picker="schedule" locale="en" change="changeSchedule(newValue, oldValue)"/>
              </div>
            </div>
       </form>
@@ -416,7 +416,7 @@
           </div>
           <div ng-bind="offer.details" class="">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab. Sed ut perspiciatis unde omnis iste natus error sit
-          </div>
+          </p>
           <div>
             <button class="btn btn-default">Share</button>
           </div>

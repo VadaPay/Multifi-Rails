@@ -28,7 +28,10 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
    root to: 'application#angular'
 
-   resources :offers, only: [:create, :index, :show] do
+   resources :offers, only: [:create, :index, :show, :update] do
+   end
+
+   resources :coupons do
    end
 
    resources :customers, only: [:create, :index, :show] do

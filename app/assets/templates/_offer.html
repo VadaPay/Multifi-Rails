@@ -1,23 +1,121 @@
 <!-- <div class="wrapper wrapper-content">
-  Coming Soon
+Coming Soon
 </div> -->
 
 
 <!-- Inject theme rules here -->
 <style>
-  body {
-    background-color: #f6f5e6;
-  }
+body {
+  background-color: #f6f5e6;
+}
 </style>
 <!-- Inject theme rules here -->
 <div class="container">
   <div class="col-md-12 template {{offer.theme}}">
-      <div class="panel">
-          <div class="panel-body">
+    <div class="panel">
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h1>{{ offer.title }}</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <img ng-show="offer.remote_offer_url" ng-src="{{offer.remote_offer_url}}" class="img-responsive img-polaroid"/>
+          </div>
+          <div class="col-md-8">
+            <p> {{ offer.details }}</p>
             <div class="row">
-              <h1>{{ offer.title }}</h1>
+              <div class="col-md-2">
+                <a class="btn btn-lg btn-success" ng-click="getCoupon()">Get Coupon</a>
+              </div>
+              <div class="col-md-10">
+                  <timer class="pull-right" end-time="interval">{{days}} days, {{hours}} hours, {{minutes}} minutes, {{seconds}} seconds.</timer>
+              </div>
             </div>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-md-3">
+            <div class="col-md-1">
+              <i class="fa fa-facebook"></i>
+            </div>
+            <div class="col-md-2">
+              <!-- <p>FACEBOOK</p> -->
+              <a href="javascript:void(0)"
+              socialshare
+              socialshare-provider="facebook"
+              socialshare-text="720kb AngularJS Socialshare"
+              socialshare-hashtags="angularjs, angular-socialshare"
+              socialshare-url="http://720kb.net">
+              Share
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="col-md-1">
+            <i class="fa fa-twitter"></i>
+          </div>
+          <div class="col-md-2">
+            <!-- <p>TWITTER</p> -->
+            <a href="javascript:void(0)"
+            socialshare
+            socialshare-provider="twitter"
+            socialshare-text="720kb AngularJS Socialshare"
+            socialshare-hashtags="angularjs, angular-socialshare"
+            socialshare-url="http://720kb.net">
+            Tweet
+          </a>
         </div>
       </div>
-  </div>
+    <div class="col-md-3">
+      <div class="col-md-1">
+        <i class="fa fa-linkedin"></i>
+      </div>
+      <div class="col-md-2">
+        <!-- <p>LINKEDIN</p> -->
+        <a href="javascript:void(0)"
+        socialshare
+        socialshare-provider="linkedin"
+        socialshare-text="720kb AngularJS Socialshare"
+        socialshare-hashtags="angularjs, angular-socialshare"
+        socialshare-url="http://720kb.net">
+        Share
+      </a>
+    </div>
+    </div>
+    </div>
+      </div>
+    </div>
 </div>
+</div>
+
+<script type="text/ng-template" id="RedeemOfferModal.html">
+  <div class="modal-header">
+    <h3 class="modal-title">
+      Redeem Offer
+    </h3>
+  </div>
+  <div class="modal-body">
+    <form ng-show="!formSubmitted" class="form" ng-submit="addCustomer()">
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" class="form-control" ng-model="customer.name"/>
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-control" ng-model="customer.email"/>
+      </div>
+      <div class="form-group">
+          <label>Phone Number</label>
+          <input type="text" class="form-control" ng-model="customer.phone"/>
+      </div>
+      <button type="submit" class="btn btn-lg btn-primary">Add</button>
+    </form>
+    <div ng-show="formSubmitted" class="row">
+      <h3>Your Coupon Code: {{ coupon.code }}</h3>
+      <p>We have just sent you your code via email and sms. Please keep it safe.</p>
+    </div>
+    </div>
+  </div>
+</script>
