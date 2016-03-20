@@ -23,6 +23,7 @@ class OffersController < ApplicationController
     # end
   end
 
+
   def show
     respond_with Offer.find(params[:id])
   end
@@ -32,7 +33,7 @@ class OffersController < ApplicationController
 
     offer = Offer.create(post_params.merge(user_id: current_user.id))
     puts(offer)
-    coupons_limit = params[:couponlimit]
+    coupons_limit = params[:couponlimit].to_i
     puts(coupons_limit)
     i = 0
 
@@ -58,9 +59,15 @@ class OffersController < ApplicationController
     respond_with offer
   end
 
+  def update
+    offer = Offer.find(params[:id])
+    offer.update(post_params)
+    respond_with offer
+  end
+
   private
   def post_params
-    params.require(:offer).permit(:details, :title, :termsconditions, :url, :address1, :address2, :city, :theme, :companyname, :couponlimit, :isDraft, :expiry, :isScheduled, :scheduledFor)
+    params.require(:offer).permit(:details, :title, :termsconditions, :url, :address1, :address2, :city, :theme, :companyname, :couponlimit, :isDraft, :expiry, :isScheduled, :scheduledFor, :remote_offer_url)
   end
 
 end
