@@ -14,10 +14,10 @@ class OffersController < ApplicationController
 
     # log = Logging.logger(STDOUT)
 
-    logger.debug "this debug message will not be output by the logger"
+    # logger.debug "this debug message will not be output by the logger"
 
     # if params[:scheduled] == false
-      respond_with Offer.where({user_id: current_user.id, isDraft: false})
+      respond_with Offer.where({user_id: current_user.id})
     # else
       # respond_with Offer.where({user_id: current_user.id, isDraft: false, isScheduled: true})
     # end

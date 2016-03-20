@@ -2,11 +2,24 @@
   <div ng-show="firstrun" class="row text-center">
     <h1>Create your first Offer</h1>
   </div>
-  <div class="row text-center">
+  <div class="row">
     <div ng-repeat="offer in offers" class="col-md-4">
-      <div class="well">
-        <h3>{{offer.title}}</h3>
-        <a target="_blank" ui-sref='offer({id: offer._id.$oid})'>View</a>
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">{{offer.title}}</h3>
+        </div>
+        <div class="panel-body">
+          <p>Total Coupons: <span>{{offer.couponlimit}}</span></p>
+          <p ng-show="offer.expiry">Expires on: <span>{{offer.expiry | amDateFormat:'MM.DD.YYYY HH:mm:ss'}}</span>
+        </div>
+        <div class="panel-footer">
+          <div class="row">
+            <a ng-show="offer.isDraft" class="btn btn-warning" ui-sref='editoffer({id: offer._id.$oid})'><i class="fa fa-pencil"></i> Edit Draft</a>
+          </div>
+          <div class="row">
+            <a target="_blank" class="btn btn-primary" ui-sref='offer({id: offer._id.$oid})'><i class="fa fa-eye"></i> View</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
